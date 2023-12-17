@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>E-commerce product page</title>
+
+
+  <!-- Google Font link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Remix icon link -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+
+
+  <!-- CSS stylesheet link -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div id="root">
+
+    <!-- Navbar start -->
+    <nav>
+
+      <div class="desktop-nav">
+        <div onclick="showMenu()" class="icon-menu-mobile">
+          <img src="./images/icon-menu.svg" alt="menu-icon">
+        </div>
+        <div class="nav-menu-container">
+          <!-- <h2 class="title">Sneakers</h2> -->
+          <img src="./images/logo.svg" class="logo" alt="logo">
+          <div class="nav-menu">
+            <li><a href="#collection">Collections</a>
+              <div></div>
+            </li>
+            <li><a href="#men">Men</a>
+              <div></div>
+            </li>
+            <li><a href="#women">Women</a>
+              <div></div>
+            </li>
+            <li><a href="#about">About</a>
+              <div></div>
+            </li>
+            <li><a href="#contact">Contact</a>
+              <div></div>
+            </li>
+          </div>
+        </div>
+
+        <div class="nav-mobile-container close-menu">
+          <span class="closs-icon">
+            <i onclick="showMenu()" class="ri-close-fill"></i>
+          </span>
+          <ul class="nav-menu-mobile">
+            <li><a onclick="showMenu()" href="#collection">Collections</a></li>
+            <li><a onclick="showMenu()" href="#men">Men</a></li>
+            <li><a onclick="showMenu()" href="#women">Women</a></li>
+            <li><a onclick="showMenu()" href="#about">About</a></li>
+            <li><a onclick="showMenu()" href="#contract">Contract</a></li>
+          </ul>
+        </div>
+
+        <div class="customer-section">
+          <div onclick="showCart()" class="customer-cart">
+            <img src="./images/icon-cart.svg" alt="cart-icon">
+            <span></span>
+          </div>
+
+          <div class="cart-details">
+            <div class="cart-heading">
+              <b>Cart</b>
+            </div>
+            <div class="horizontal-line"></div>
+
+            <div class="cart-product">
+
+              <p class="showing-empty-cart">Your cart is empty</p>  
+              <div class="product-order">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="" class="product-ordered-thumbnail">
+                <div class="product-ordered-details">
+                  <p class="product-name">Fall Limited Edition Sneakers</p>
+                  <p>$125.00 x <span class="qty-selected">1</span> <b class="total-amount">$125.00</b></p>
+                </div>
+                <img src="./images/icon-delete.svg" alt="" class="delete-icon">
+              </div>     
+              <div class="checkout-button">
+                Checkout
+              </div> 
+
+            </div>
+          </div>
+
+          <div class="customer-profile">
+            <img src="./images/image-avatar.png" alt="image-avatar">
+          </div>
+
+        </div>
+      </div>
+
+    </nav>
+    <!-- navbar end -->
+
+    <div class="horizontal-line menu"></div>
+
+    <!-- main section start -->
+
+    <section class="main">
+      <div class="container">
+        <div class="product-image-part">
+          <div class="product-big-image">
+            <img src="./images/image-product-1.jpg" alt="product-image">
+            <div class="icon-container previous">
+              <i class="ri-arrow-left-s-line previous"></i>
+            </div>
+            <div class="icon-container next">
+              <i class="ri-arrow-right-s-line next"></i>
+            </div>
+          </div>
+          <div class="product-thumbnails-image-part">
+            <div class="thumbnail-container border-radius">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="product-thumbnail-image">
+              <div class="white-overlay opacity">
+
+              </div>
+            </div>
+            <div class="thumbnail-container" id="2">
+              <img src="./images/image-product-2-thumbnail.jpg" alt="product-thumbnail-image">
+              <div class="white-overlay">
+
+              </div>
+            </div>
+            <div class="thumbnail-container">
+              <img src="./images/image-product-3-thumbnail.jpg" alt="product-thumbnail-image">
+              <div class="white-overlay">
+
+              </div>
+            </div>
+            <div class="thumbnail-container">
+              <img src="./images/image-product-4-thumbnail.jpg" alt="product-thumbnail-image">
+              <div class="white-overlay">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Popup image start -->
+        <div class="popup-image">
+          <div class="popup-big-image-container">
+            <img src="./images/image-product-1.jpg" alt="product">
+            <i class="ri-close-fill cross"></i>
+            <div class="icon-container previous">
+              <i class="ri-arrow-left-s-line previous"></i>
+            </div>
+            <div class="icon-container next">
+              <i class="ri-arrow-right-s-line next"></i>
+            </div>
+          </div>
+          <div class="product-thumbnails-image-part">
+            <div class="thumbnail-container border-radius 1">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="product-thumbnail-image">
+              <div class="white-overlay opacity">
+
+              </div>
+            </div>
+            <div class="thumbnail-container 2">
+              <img src="./images/image-product-2-thumbnail.jpg" alt="product-thumbnail-image">
+              <div class="white-overlay">
+
+              </div>
+            </div>
+            <div class="thumbnail-container 3">
+              <img src="./images/image-product-3-thumbnail.jpg" alt="product-thumbnail-image">
+              <div class="white-overlay">
+
+              </div>
+            </div>
+            <div class="thumbnail-container 4">
+              <img src="./images/image-product-4-thumbnail.jpg" alt="product-thumbnail-image">
+              <div class="white-overlay">
+
+              </div>
+            </div>
+          </div>
+            <!-- Popup image end -->
+
+        </div>
+        <div class="product-description-part">
+          <p class="Company-name">SNEAKER COMPANY</p>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p class="product-description">These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="product-price-detail">
+            <div class="product-price-container">
+              <h3>$125.00</h3>
+              <span>50%</span>
+            </div>
+            <div class="actual-price">
+              <p class="product-actual-price">$250.00</p>
+            </div>
+          </div>
+
+          <div class="CTA-container">
+            <div class="quantity-container">
+              <img onclick="reduceQuantity()" src="./images/icon-minus.svg" alt="minus-icon">
+              <p>1</p>
+              <img onclick="increasingQuantity()" src="./images/icon-plus.svg" alt="plus-icon">
+            </div>
+            <div class="add-to-cart-button">
+              <i class="ri-shopping-cart-2-line"></i>
+              <p>Add to cart</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- main section end -->
+
+  </div>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="./index.js"></script>
+</body>
+
+</html>
